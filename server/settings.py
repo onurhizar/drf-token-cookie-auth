@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Third-Party Apps
     'rest_framework',
+    'rest_framework.authtoken',
 
     # Local Apps (Your project's apps)
     'core',
@@ -54,6 +55,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+    ],
+}
+
 
 ROOT_URLCONF = 'server.urls'
 
