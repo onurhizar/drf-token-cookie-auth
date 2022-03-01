@@ -41,3 +41,15 @@ python manage.py drf_create_token onur
 lets try
 
 http http://127.0.0.1:8000/hello/ 'Authorization: Token 1871841c61139e8d3bd11cc747b0392177663bca'
+
+
+
+
+The DRF provide an endpoint for the users to request an authentication token using their username and password.
+urls:
+from rest_framework.authtoken.views import obtain_auth_token
+path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+
+getting token:
+`http post http://127.0.0.1:8000/api-token-auth/ username=onur password=123123
+`
