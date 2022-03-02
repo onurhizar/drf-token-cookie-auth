@@ -53,3 +53,16 @@ path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 getting token:
 `http post http://127.0.0.1:8000/api-token-auth/ username=onur password=123123
 `
+
+
+
+
+get token
+`http post http://127.0.0.1:8000/gettoken/ username=onur password=123123`
+
+header token
+`http http://127.0.0.1:8000/hello/ 'Authorization: Token bf4efd8ba04cae0257fbb11822c84489f6ea8387'`
+
+cookie token
+`http http://127.0.0.1:8000/hello/ Cookie:"auth_token=bf4efd8ba04cae0257fbb11822c84489f6ea8387"`
+
